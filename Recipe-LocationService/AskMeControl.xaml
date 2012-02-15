@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="Microsoft.Phone.Recipes.LocationService.AskMeControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             FontFamily="{StaticResource PhoneFontFamilyNormal}"
+             FontSize="{StaticResource PhoneFontSizeNormal}"
+             Foreground="{StaticResource PhoneForegroundBrush}"
+             Background="Black">
+
+    <Grid x:Name="LayoutRoot"
+          Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border BorderBrush="{StaticResource PhoneForegroundBrush}"
+                BorderThickness="4"
+                Padding="8"
+                Margin="10,35,20,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="Line 1"
+                           Grid.Row="0"
+                           FontSize="{StaticResource PhoneFontSizeLarge}" />
+                <TextBlock Margin="10, 10, 10, 25"
+                           Grid.Row="1"
+                           FontSize="{StaticResource PhoneFontSizeNormal}"
+                           Text="Line 2" />
+                <StackPanel Orientation="Horizontal"
+                            Grid.Row="2">
+                    <Button Content="Accept"
+                            x:Name="AcceptButton"
+                            Click="AcceptButton_Click" />
+                    <Button Content="Decline"
+                            x:Name="DeclineButton"
+                            Click="DeclineButton_Click" />
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
